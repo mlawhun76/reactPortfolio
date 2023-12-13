@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import GameCard from "./GameCard";
+const gamesList = [
+  {
+    id: 0,
+    name: "Scythe",
+    rating: 4,
+    category: "Fun",
+    description: "What a FUN game"
+  },
+  {
+    id: 1,
+    name: "Machi Koro",
+    rating: 2,
+    category: "Deck Building",
+    description: "IT's alright... if you like building decks"
+  },
+  {
+    id: 2,
+    name: "Galaxy Trucker",
+    rating: 4,
+    category: "Fun",
+    description: "Fun but challenging"
+  }
+
+
+]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <h1>My Board Games</h1>
+        {gamesList.map(g => <GameCard game={g}/>) }
     </div>
   );
 }
